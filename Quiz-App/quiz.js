@@ -1,4 +1,4 @@
-//here  aremy questions with the answers you can define the correct one and incorrect ones
+//Here are my questions with the answers, you can define the correct and incorrect ones
 const questions =[
     {
         question:"In which Italian city can you find the Colosseum?", answers:[
