@@ -1,0 +1,84 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: Blippo, fantasy;
+    box-sizing: border-box ;
+
+}
+h1{
+    letter-spacing: 1px;
+    font-size: 50px;
+    animation: move 3s  ;
+
+}
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(140deg,#fa2a2a , #fcff4e);
+    display: flex;
+    color: #ffffff;
+    padding: 0.6rem;
+
+}
+.age_calculator{
+    width: 100%;
+    max-width: 800px;
+    margin-top: 10%;
+    margin-left: 20%;
+}
+@keyframes move {
+    60% {font: 55px bold; font-family: Blippo, fantasy;}
+  }
+  .age_calculator span{
+    font-size: 50px;
+    color: #000000;
+    animation: move 3s  ;
+  }
+  .enter-age{
+    margin: 40px 0;
+    padding: 35px;
+    border-radius: 10px;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+  }
+  .enter-age input{
+    flex: 1;
+    margin-right: 20px;
+    padding: 14px 20px;
+    border:0;
+    outline: 0;
+    font-size: 18px;
+    border-radius: 5px;
+    position: relative;
+  }
+  .enter-age button{
+    background: #000000;
+    border: 0;
+    outline: 0;
+    padding: 15px 30px;
+    border-radius: 5px;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 22px;
+    font-weight:lighter;
+  }
+  .enter-age input::-webkit-calendar-picker-indicator{
+    top:0;
+    right:0;
+    left:0;
+    bottom:0;
+    width: auto;
+    position: absolute;
+    background-position: calc(100% - 10px);
+    background-size: 30px;
+    cursor: pointer;
+  }
+  p{
+    font-size: 20px ;
+    color: #000;
+  }
+#output{
+font-size: 20px;
+color:#ffffff;
+}
