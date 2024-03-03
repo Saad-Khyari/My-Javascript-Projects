@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+ <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Quote Generator</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="https://fav.farm/📜" />
 </head>
 <body>
   
@@ -13,10 +14,27 @@
     <blockquote id="quote">Loading...</blockquote>
     <span id="author">Loading...</span>
     <div>
-      <button onclick="">New Quote</button>
-      <button onclick=""> <img src="X_icon.png" alt=""> X-Tweet</button>
+      <button onclick="getquote(api_Log)">New Quote</button>
+      <button onclick="shareonX()"> <img src="X_icon.png" alt=""> X-Tweet</button>
     </div>
 </div>  
-  
+
+<script>
+  const quote = document.getElementById("quote");
+  const author = document.getElementById("author");
+  const api_Log ="https://api.quotable.io/random"; //API for getting random quote
+async function getquote(url){
+  const response = await fetch(url);
+  var data =await response.json();
+  console.log(data);
+  quote.innerHTML = data.content;
+  author.innerHTML = data.author;
+}
+getquote(api_Log);
+
+function shareonX(){
+  window.open(href="https://twitter.com/intent/tweet?text="+quote.innerHTML+ "        -----By "+ author.innerHTML,"Tweet Window","width=600,height=450");
+}
+</script>
 </body>
 </html>
