@@ -18,4 +18,30 @@ body{
     box-shadow: 0 10px 20px 0px rgba(0,0,0,0.15);
 
 }
+.quote-box h2{
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 35px;
+    position: relative;
+}
+
+.quote-box h2::after{
+    content: '';
+    width: 75px;
+    height: 3px;
+    border-radius: 3px;
+    background: rgb(0, 0, 0);
+    bottom: -10px;
+    left:50%;
+    transform: translateX(-50% );
+    position: absolute;
+}
+.quote-box blockquote{
+    font-size: 26px;
+    min-height: 110px;
+
+}
+.quote-box blockquote::before, .quote-box blockquote::after{
+content:'"';   
+}
 
