@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background: linear-gradient(120deg,#e6a9f5, #ff607d);
+}
+.button{
+    margin: 50px;
+}
+.buttons button{
+    background: #333;
+    color: #fff;
+    border: 0;
+    outline: 0;
+    width: 200px;
+    height: 60px;
+    margin: 5px;
+    cursor: pointer;
+    margin-top: 50px;
+    font-size: 30px;
+   display: flexbox;
+}
+#toastBox{
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 20px;
+
+}
+.toast{
+    width: 400px;
+    height: 80px;
+    background: white;
+    font-weight: 500;
+    margin: 15px 0 ;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    position: relative;
+    transform: translateX(100%);
+    animation: moveleft 0.5s linear forwards;
+}
+@keyframes moveleft {
+    100%{
+        transform: translateX(0);
+    }
+}
